@@ -12,6 +12,8 @@
 
 // Autres constantes
 
+        define('DATE_FORMAT', 'd-m-Y');
+
 // Initialisation des zones dynamiques
         $content = '';
 
