@@ -14,7 +14,15 @@
 
         define('DATE_FORMAT', 'd-m-Y');
 
+        $root = explode('index.php', $_SERVER['PHP_SELF']);
+        define('ROOT', 'http://'.$_SERVER['HTTP_HOST'].$root[0]);
+
 // Initialisation des zones dynamiques
+        
+        $title = '';
         $content = '';
+        
+
+
 
     

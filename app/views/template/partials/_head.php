@@ -5,7 +5,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Clean Blog - Start Bootstrap Theme</title>
+    <title>Clean Blog - <?php echo $title; ?></title>
+
+    <base href="<?php echo ROOT; ?>" target="_top">
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">

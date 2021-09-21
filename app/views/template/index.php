@@ -8,7 +8,10 @@
     <!-- Navigation -->
       <?php include '../app/views/template/partials/_nav.php'; ?>
     <!-- CONTENU -->
-      <?php include '../app/views/template/partials/_main.php'; ?>
+    <main>
+      <?php echo $content?>
+      <hr>
+    </main>
     <!-- Footer -->
       <?php include '../app/views/template/partials/_footer.php'; ?>
     <!-- Script -->

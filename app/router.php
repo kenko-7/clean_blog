@@ -1,4 +1,4 @@
 <?php 
 
-    include_once '../app/controllers/postController.php';
-    \App\Controllers\PostController\indexAction($conn);
+    include '../app/controllers/pageController.php';
+    App\Controllers\PageController\showAction($conn, 1);
