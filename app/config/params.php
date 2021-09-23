@@ -21,6 +21,7 @@
         
         $title = '';
         $content = '';
+        $zoneScripts = '';
         
 
 

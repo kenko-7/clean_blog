@@ -20,6 +20,20 @@
               <?php echo $page['texte']; ?>
               </div>
 
+                <?php 
+                
+                switch ($page['id']):
+                    case 1:
+                        include_once '../app/controllers/postController.php';
+                        App\Controllers\PostController\indexAction($conn);
+                    break;
+                    case 3:
+                        include '../app/views/template/partials/_contact-form.php';
+
+                    break;
+                endswitch;
+                
+                ?>
               
             </div>
           </div>
