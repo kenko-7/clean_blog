@@ -3,13 +3,15 @@
 namespace App\Models\PostModel;
 
 
-function findAll(\PDO $conn, int $limit = 10){
+function findAll(\PDO $conn, int $limit = 10, int $offset = 0){
     $sql = "SELECT * 
             FROM posts
             ORDER BY datePublication DESC
-            LIMIT :limit;";
+            LIMIT :limit
+            OFFSET :offset;";
     $rs = $conn->prepare($sql);
     $rs->bindValue(':limit', $limit, \PDO::PARAM_INT);
+    $rs->bindValue(':offset', $offset, \PDO::PARAM_INT);
     $rs->execute();
     return $rs->fetchAll(\PDO::FETCH_ASSOC);
 }
