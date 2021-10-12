@@ -2,12 +2,15 @@
 
 // ROUTES AJAX ------------------------------------------------------------
 
-if (isset($_GET['ajax']) and $_GET['ajax'] === 'older-posts' ): 
+if (isset($_GET['ajax'])):
 
-    include '../app/controllers/postController.php';
-    App\Controllers\PostController\AjaxOlderAction($conn , $_GET['offset']);
-
+    include_once '../app/routeur/ajaxrouteur.php';
 // ROUTES STANDARDS -------------------------------------------------------
+
+elseif (isset($_GET['post'])):
+    include '../app/controllers/postController.php';
+    App\Controllers\PostController\addFormAction($conn);
+
 
 elseif (isset($_GET['postId'])): 
 

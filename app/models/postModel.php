@@ -25,3 +25,13 @@ function findOneById(\PDO $conn, $id){
     $rs->execute();
     return $rs->fetch(\PDO::FETCH_ASSOC);
 }
+
+function updateField(\PDO $conn, int $id, string $field, string $value){
+    $sql = "UPDATE posts 
+            SET `$field` = :value
+            WHERE id = :id;";
+    $rs = $conn->prepare($sql);
+    $rs->bindValue(':id', $id, \PDO::PARAM_INT);
+    $rs->bindValue(':value', $value, \PDO::PARAM_STR);
+    return ($rs->execute())?1:0;
+}

@@ -18,6 +18,10 @@ RewriteEngine on
         # PATTERN : /post/x
         # DETAILS DU POST x
         RewriteRule ^post\/([0-9]+)$ index.php?postId=$1 [L]
+
+    #FORMULAIRE AJOUT POST : 
+        # PATTERN : /post/add
+        RewriteRule ^post\/add$ index.php?post=add [L]
     
     #DETAIL D'UNE PAGE : 
         # PATTERN : /page/x
